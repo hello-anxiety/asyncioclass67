@@ -11,7 +11,7 @@ async def main():
         for i in range(5):
             rand_list.append(random.randint(1,151))
         for number in rand_list:
-            pokemon_url = f'https://pokeapi.co/api/v2/pokemon/{number}'
+            pokemon_url = f'https://pokeapi.co/api/v2/ability/battle-armor/{number}'
             print(f"{time.ctime()} - get {pokemon_url}")
             resp = await client.get(pokemon_url)
             pokemon_json = resp.json()
